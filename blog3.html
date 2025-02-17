@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>InuKawaii</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        :root {
+            --white-color: #fff;
+            --dark-color: #121212;
+            --primary-color: #d63384;
+            --secondary-color: #ffe6f0;
+            --background-color: #fff;
+            --text-color-light: #121212;  /* Warna teks untuk light mode */
+            --text-color-dark: #ffffff;   /* Warna teks untuk dark mode */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-color-light);  /* Warna teks default untuk light mode */
+        }
+
+        body.dark-mode {
+            --background-color: #463e3e;
+            --primary-color: #0e070b;
+            --secondary-color: #595959;
+            color: var(--text-color-dark);   /* Warna teks untuk dark mode */
+            background-color: var(--primary-color);  /* Ubah background sesuai mode */
+        }
+
+        .navbar {
+            background-color: var(--primary-color) !important;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            border: 1px solid #ffffff; /* Border berwarna sesuai dengan primary color */
+        }
+
+        .navbar-toggler-icon {
+            background-color: var(--secondary-color); /* Ubah warna ikon hamburger */
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .brand-text {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .search-box {
+            width: 300px;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            color: var(--text-color-light); /* Menyesuaikan warna teks konten */
+        }
+
+        .content h2, .content h3 {
+            color: var(--primary-color); /* Warna judul tetap konsisten */
+            font-weight: bold;
+        }
+
+        .content p {
+            font-size: 16px;
+            text-align: justify;
+        }
+
+        .btn-outline-success {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .btn-outline-success:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .theme-toggle i {
+            color: white;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="9918480434ddc5c605b414fe047e058f-removebg-preview.png" alt="InuKawaii" class="logo">
+            <span class="brand-text">InuKawaii</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="https://auliarahmadan13.github.io/inukawaii/home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categories
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="https://auliarahmadan13.github.io/inukawaii/skincare">Skincare</a>
+                        <a class="dropdown-item" href="https://auliarahmadan13.github.io/inukawaii/makeup">Makeup</a>
+                        <a class="dropdown-item" href="https://auliarahmadan13.github.io/inukawaii/suplement">Suplement</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="What are you looking for?" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+    
+    <div class="image-container">
+        <img src="ilustrasi-pakai-skincare-anti-aging-yang-sesuai-dengan-jenis-kulit.jpg" alt="Background Image">
+    </div>
+
+    <div class="content">
+        <h2>Tips memilih skincare sesuai dengan jenis kulitmu!</h2>
+        <p>Pernah nggak sih, kamu bingung harus pakai produk skincare yang mana karena kulit kamu cenderung rewel? Sebelum memilih produk skincare yang cocok, kamu perlu mengenali jenis kulitmu. Apakah kulit kamu kering, berminyak, atau sensitif? Untuk mendapatkan hasil maksimal, kamu harus tahu dulu tipe kulit yang kamu punya supaya bisa memilih skincare yang tepat.</p>
+        <p>Mungkin kamu merasa skincare itu gampang-gampang susah. Bisa jadi masalahnya bukan karena produk skincarenya, tapi karena kamu belum mengenal jenis kulitmu dengan baik. Yuk, kenali tipe kulitmu dan pilih skincare yang sesuai!</p>
+        <h3>Kulit Kering</h3>
+        <p>Kulit kering biasanya terasa kasar, mudah mengelupas, dan kadang terasa ketarik setelah cuci muka. Ciri lainnya, kulit kering cenderung terlihat kusam dan muncul garis-garis halus. Skincare yang cocok adalah yang mengandung hyaluronic acid, glycerin, dan ceramide untuk menjaga kelembapan kulit. Pilih cleanser yang tidak mengandung sabun keras agar kulit tidak semakin kering. Jangan lupa pakai moisturizer setiap hari agar kulit tetap lembap.</p>
+    </div>
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i> <i class="fas fa-sun" style="display: none;"></i>
+    </button>
+    
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        const moonIcon = themeToggle.querySelector('.fa-moon');
+        const sunIcon = themeToggle.querySelector('.fa-sun');
+    
+        function updateTheme() {
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'block';
+            } else {
+                localStorage.setItem('theme', 'light');
+                moonIcon.style.display = 'block';
+                sunIcon.style.display = 'none';
+            }
+        }
+    
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            updateTheme();
+        });
+    
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            updateTheme();
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

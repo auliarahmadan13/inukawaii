@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>InuKawaii</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --white-color: #fff;
+            --dark-color: #121212;
+            --primary-color: #d63384;
+            --secondary-color: #ffe6f0;
+            --background-color: #fff;
+            --text-color: #d63384;
+            --dark-background: #121212;
+            --dark-text-color: #fff;
+            --dark-primary: #bb3385;
+            --dark-secondary: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        body.dark-mode {
+            --background-color: #463e3e;
+            --text-color: #ffffff;
+            --primary-color: #0e070b;
+            --secondary-color: #595959;
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+        }
+
+        .navbar-brand strong {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .jumbotron {
+            background: var(--secondary-color);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .icon-section {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 0;
+        }
+
+        .icon-box {
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #d63384;
+            border-radius: 10px;
+            width: 150px;
+            background: rgba(255, 230, 240, 0.9);
+            transition: 0.3s;
+        }
+
+        .icon-box:hover {
+            background: rgba(255, 153, 204, 0.9);
+            transform: scale(1.05);
+        }
+
+        .icon-box img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .icon-box p {
+            margin-top: 10px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .theme-toggle i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* Dark Mode */
+        body.dark-mode .navbar {
+            background-color: #000000; /* Black navbar in dark mode */
+        }
+
+        body.dark-mode .jumbotron {
+            background: var(--dark-secondary);
+        }
+
+        body.dark-mode .icon-box {
+            background: rgba(51, 51, 51, 0.7);
+            border: 2px solid var(--dark-primary);
+        }
+
+        body.dark-mode footer {
+            background-color: #000000; /* Black footer in dark mode */
+        }
+
+        body.dark-mode .theme-toggle {
+            background: #000000; /* Black toggle in dark mode */
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle">
+        <i class="fas fa-moon"></i> <i class="fas fa-sun" style="display: none;"></i>
+    </button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <img src="Desain tanpa judul.png" alt="Logo" width="80" height="80" class="me-2">
+                    <strong>InuKawaii</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="https://auliarahmadan13.github.io/inukawaii/home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="https://auliarahmadan13.github.io/inukawaii/login">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main role="main">
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="display-4">We're introducing our products to our pretty babes!</h1>
+                <p class="lead">"Flawless Beauty, Effortless You"</p>
+            </div>
+        </section>
+
+        <section class="icon-section">
+            <a href="https://auliarahmadan13.github.io/inukawaii/skincare" class="icon-button">
+                <div class="icon-box">
+                    <img src="1.png" alt="Icon 1">
+                    <p>Skincare</p>
+                </div>
+            </a>
+            
+            <a href="https://auliarahmadan13.github.io/inukawaii/makeup" class="icon-button">
+                <div class="icon-box">
+                    <img src="2.png" alt="Icon 2">
+                    <p>Makeup</p>
+                </div>
+            </a>
+            
+            <a href="https://auliarahmadan13.github.io/inukawaii/suplement" class="icon-button">
+                <div class="icon-box">
+                    <img src="3.png" alt="Icon 3">
+                    <p>Suplement</p>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer class="text-muted">
+        <div class="container">
+            <p style="color:#fff">Flawless Beauty, Effortless You</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.querySelector('.theme-toggle');
+        const body = document.body;
+        const moonIcon = themeToggle.querySelector('.fa-moon');
+        const sunIcon = themeToggle.querySelector('.fa-sun');
+
+        function updateTheme() {
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                moonIcon.style.display = 'none';
+                sunIcon.style.display = 'block';
+            } else {
+                localStorage.setItem('theme', 'light');
+                moonIcon.style.display = 'block';
+                sunIcon.style.display = 'none';
+            }
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            updateTheme();
+        });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            body.classList.add('dark-mode');
+            updateTheme();
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
